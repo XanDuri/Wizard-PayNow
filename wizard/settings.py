@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k%84w15v#-4qhbs1c*qe+kyli%z#_a+hwib32#y__db8z7fuer'
 
 
-PAYNOW_API_KEY = '1b0abec6-c731-4938-a064-1c2deccba94c'
-PAYNOW_SIGNATURE_KEY = 'a1eecbbe-958a-4678-8936-5b98cd02c325'
+PAYNOW_API_KEY = 'YOUR_API_KEY'
+PAYNOW_SIGNATURE_KEY = 'YOUR_SIGNATURE_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
