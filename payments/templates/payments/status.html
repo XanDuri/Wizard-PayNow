@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Status Płatności</title>
+</head>
+<body>
+    <h1>Status Płatności</h1>
+    {% if status %}
+        <p>Status Twojej płatności to: {{ status.status }}</p>
+        <p>Identyfikator płatności: {{ status.payment_id }}</p>
+    {% else %}
+        <p>Wystąpił błąd podczas przetwarzania płatności.</p>
+    {% endif %}
+    <a href="{% url 'pay' %}">Powrót do strony płatności</a>
+</body>
+</html>

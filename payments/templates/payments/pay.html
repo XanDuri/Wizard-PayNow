@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Płatność</title>
+</head>
+<body>
+    <h1>Płatność przez Paynow</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="{% url 'pay' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Zapłać teraz</button>
+    </form>
+</body>
+</html>

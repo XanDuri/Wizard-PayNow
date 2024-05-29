@@ -20,11 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'SECRET'
+SECRET_KEY = 'SECRET_KEY'
 
 
-PAYNOW_API_KEY = 'YOUR_API_KEY'
-PAYNOW_SIGNATURE_KEY = 'YOUR_SIGNATURE_KEY'
+PAYNOW_API_KEY = 'PAYNOW_API_KEY'
+PAYNOW_SIGNATURE_KEY = 'PAYNOW_SIGNATURE_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'wizard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'shop_wizard',  # Nazwa bazy danych
+        'USER': 'postgres',  # Twoja nowa nazwa użytkownika
+        'PASSWORD': '!1Olsztyn',  # Hasło, które ustawiłeś dla nowego użytkownika
+        'HOST': 'localhost',  # Host, zazwyczaj localhost
+        'PORT': '5432',  # Port, domyślnie PostgreSQL używa 5432
     }
 }
 
